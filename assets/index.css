@@ -1,0 +1,445 @@
+:root{
+  --background-dark: #2d3548;
+  --text-light: rgba(255, 1, 1, 0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+  --spacing-s: 80px;
+  --spacing-m: 16px;
+  --spacing-l: 70px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1920px;
+  --branco-claro: #ffffff;
+}
+
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+  html{
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+  }
+
+  body{
+    height: 100%;
+  }
+
+
+.fightarea {
+display: flex;
+flex-direction:row;
+justify-content: space-between;
+align-items: center;
+
+}
+
+.player1, .player2{
+color: rebeccapurple;
+display: flex;
+flex-direction: column
+
+}
+.player1image, .player2image{
+    width: 300px;
+    height: 300px;
+    border: 10px solid #000000;
+    border-radius: 10px;
+    background-color: #000000;
+}
+
+.health{
+    height: 5rem;
+    color:white;
+    display: flex;
+    flex-direction: column;
+}
+
+.health .playerhealth{
+    border: 10px solid #000000;
+    border-radius: 10px;
+    background-color: red;
+    height: inherit;
+    font-size: 3rem;
+}
+
+.health .playermana{
+  border: 10px solid #000000;
+  border-radius: 10px;
+  background-color: rgba(0, 119, 255, 0.865);
+  height: inherit;
+  font-size: 3rem;
+}
+
+.attack_skills_area{
+    display: flex;
+}
+
+.player1name, .player2name{
+  color: #fff;
+  font-size: 3rem;
+  margin: 10dvw;
+}
+
+.player1attack, .player2attack, .player1magic, .player2magic{
+  color: #000000;
+  font-size:2rem;
+}
+/* 3 */
+.btn-3 {
+  background: rgb(0,172,238);
+background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+
+}
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+   background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3:hover{
+   background: transparent;
+  box-shadow: none;
+}
+.btn-3:hover:before {
+  height: 100%;
+}
+.btn-3:hover:after {
+  width: 100%;
+}
+.btn-3 span:hover{
+   color: rgba(2,126,251,1);
+}
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+   background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3 span:hover:before {
+  height: 100%;
+}
+.btn-3 span:hover:after {
+  width: 100%;
+}
+
+
+
+.log{
+    border: 7px solid #6f6712;
+    border-radius: 10px;
+    overflow-y: scroll;
+    font-size: 1.5rem;
+    height: 400px;
+    color: #fff;
+}
+
+.box{
+  display: flex;
+  flex-direction: column;
+    border: 7px solid #6f6712;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    height: 400px;
+    color: #fff;
+}
+
+
+
+
+.game-area{
+    display: none;
+    background-image: url(https://qualfind.com/wp-content/uploads/2019/04/black-chrome-gradient-ui-gradient-background.jpg);
+
+}
+
+
+
+
+.hero-section{
+  display: flex;
+  align-items: flex-start;
+  background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%);
+  min-height: 100%;
+  width: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
+
+.card-grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: var(--width-container);
+  width: 100%;
+  margin-top: var(--spacing-l);
+}
+
+.card{
+  position: relative;
+  width: calc((100% - var(--spacing-l)*2) / 3); /* 3 cards na primeira linha */
+  margin-bottom: var(--spacing-l);
+  flex-direction: column; /* adicionado */
+  list-style: none;
+
+}
+
+
+
+@media(min-width: 540px){
+  .card{
+    width: calc((100% - var(--spacing-l)) / 2); /* 2 cards por linha */
+  }
+}
+
+@media(min-width: 960px){
+  .card{
+    width: calc((100% - var(--spacing-l)*3) / 4); /* 4 cards por linha */
+  }
+}
+
+
+/*
+.card__background{
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition:    filter 200ms linear,
+  transform 200ms linear;
+  width: 100%;
+  height: 0;
+  position: relative;
+}
+
+
+.card:hover .card__background{
+  transform: scale(1.05) translateZ(0);
+}
+
+.card:not(:hover) .card__background{
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+*/
+.card__background {
+  margin: 0px 0px 50px 0px;
+  height: 20em;
+  width: 20em;
+  transform: rotate(45deg);
+  background-size: cover;
+  overflow: hidden;
+    }
+
+  .card__background:before {
+  content: '';
+  display: block;
+  width: 141%;
+  height: 141%;
+  top: -20%;
+  left: -20%;
+  transform: rotate(-45deg);
+  background-image: inherit;
+  background-size: cover;
+  position: absolute;
+  background-position: center center;
+
+    }
+ .card__background:hover{
+    transform: scale(1.05) translateZ(-45);
+  }
+
+
+ .card__background:not(:hover){
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+  }
+
+.card__content{
+  margin-top: 18em;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: var(--text-light);
+}
+
+.card__category{
+  background-color: var(--background-dark);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+  color: var(--branco-claro);
+  font-weight: 700;
+  width: 6em;
+}
+
+.card__heading {
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+  align-self: flex-start; /* adicionado */
+  position: absolute;
+  top: 0;
+  }
+
+.skillsDouble{
+  background: #ff3232;
+  background: linear-gradient(to right, #E13868 50%, #1A2C3A 50%);
+  background-size: 200% 100%;
+  background-position:left bottom;
+  transition:all 2s ease;
+}
+.skillsDouble:hover {
+  background-position:right bottom;
+      color:white;
+
+}
+
+
+
+.btn-danger {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: 1px solid darken(red, 5%);
+  border-radius: 3px;
+  color: #fff;
+  background-color: red;}
+
+  .btn-danger:hover {
+    background-color: darken(red, 5%);
+
+}
+
+
+  h1, a {
+    padding: 15px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  h1 {
+    font-size: 18px;
+    margin: 0;
+  }
+  a {
+    font-size: 14px;
+    font-weight: 300;
+    display: block;
+    text-decoration: none;
+    background-color: darkenr(red, 10%);
+  }
+
+
+  h3, h4 {
+    font-weight: 400;
+    margin: 0;
+  }
+  h3 {
+    padding: 12px 20px;
+    color: #fff;
+    border-radius: 25px;
+    background-color: red;
+  }
+  h4{
+    font-size: 18px;
+    color:grey;
+  }
+  section {
+    padding: 30px 20px;}
+
+  section:first-child {
+      border-bottom: 1px solid grey;
+    }
+
+    section:only-of-type,    section:only-child {
+      border-bottom: 0;
+    }
+
+
+
+  .btn {
+    float: right;
+    margin-left: 20px;
+  }
+
+
+
+
+
+  .modal {
+    display: none; /* Esconder a modal por padrão */
+    position: fixed; /* Posição fixa para cobrir toda a tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.5); /* Fundo semi-transparente */
+    z-index: 999; /* Certifique-se de que a modal apareça acima de outros elementos */
+  }
+
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centralizar a modal verticalmente e horizontalmente */
+  }
+
+  .modal-content p {
+    margin: 0 0 10px;
+  }
+
+  .modal-content input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .modal-content button {
+    float: right;
+  }
