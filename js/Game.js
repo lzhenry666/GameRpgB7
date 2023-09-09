@@ -1,3 +1,5 @@
+import { Warrior, Wizard, Archer, Priest, Slime, Lizardman, Orc, Skeleton, Dragon, Goblin, DemonLord, DevilShark } from './Class.js';
+
 class Game{
   constructor(fighter1, fighter2, fighter1El, fighter2El, logObject, hero_section) {
     this.fighter1 = fighter1;
