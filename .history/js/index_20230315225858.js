@@ -1,7 +1,3 @@
-import {Game} from "./Game.js";
-import { Warrior, Wizard, Archer, Priest, Slime, Lizardman, Orc, Skeleton, Dragon, Goblin, DemonLord, DevilShark } from "./Class.js";
-import {Log} from "./Log.js";
-
 const  log_area = document.querySelector(".log");
 const  heros = [Warrior, Wizard, Archer, Priest, Slime, Lizardman, Orc, Skeleton, Dragon, Goblin, DemonLord, DevilShark];
 const  hero_section = document.querySelector(".hero-section");

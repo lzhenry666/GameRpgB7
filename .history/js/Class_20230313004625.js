@@ -259,6 +259,3 @@ class DevilShark extends Boss{
   }
 
 }
-
-
-export { Warrior, Wizard, Archer, Priest, Slime, Lizardman, Orc, Skeleton, Dragon, Goblin, DemonLord, DevilShark };

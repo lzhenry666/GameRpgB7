@@ -224,5 +224,3 @@ showModal(title, message) {
         modal.style.display = 'block';
       }
 }
-
-export {Game};
